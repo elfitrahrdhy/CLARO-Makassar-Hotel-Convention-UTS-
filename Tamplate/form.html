@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking - CLARO Makassar Hotel & Convention</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Form Booking</h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <form>
+
+            <label>Nama</label>
+            <input type="text" required>
+
+            <label>Tanggal Check-in</label>
+            <input type="date" required>
+
+            <label>Tanggal Check-out</label>
+            <input type="date" required>
+
+            <label>Jenis Pemesanan</label>
+            <select>
+                <option>Kamar</option>
+                <option>Ballroom</option>
+            </select>
+
+            <label>Pilihan</label>
+            <select>
+                <optgroup label="Tipe Kamar">
+                    <option>Premier King Room - Rp 850.000</option>
+                    <option>Premier Twin Room - Rp 800.000</option>
+                    <option>Family Deluxe Room - Rp 1.200.000</option>
+                    <option>Suite Room - Rp 1.800.000</option>
+                </optgroup>
+
+                <optgroup label="Ballroom">
+                    <option>Grand Ballroom - Rp 10.000.000</option>
+                    <option>Glamour Ballroom - Rp 8.000.000</option>
+                    <option>Banquet Style Ballroom - Rp 6.500.000</option>
+                    <option>Junior Ballroom - Rp 4.000.000</option>
+                </optgroup>
+            </select>
+
+            <button type="submit">Booking</button>
+
+        </form>
+    </div>
+</div>
+
+<script>
+function ubahPilihan() {
+    let jenis = document.getElementById("jenis").value;
+
+    document.getElementById("kamarBox").style.display = "none";
+    document.getElementById("ballroomBox").style.display = "none";
+
+    if (jenis === "kamar") {
+        document.getElementById("kamarBox").style.display = "block";
+    } else if (jenis === "ballroom") {
+        document.getElementById("ballroomBox").style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
